@@ -7,7 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Phoenix!</title>
+    <title>Überauth Example</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -15,7 +16,12 @@
     <div class="container" role="main">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+          <li>
+            <a href="https://github.com/doomspork/ueberauthscrogsonscrogson_example">
+              <i class="fa fa-github"></i>
+              View on GitHub
+            </a>
+          </li>
         </ul>
         <span class="logo"></span>
       </div>

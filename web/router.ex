@@ -1,5 +1,6 @@
 defmodule UeberauthExample.Router do
   use UeberauthExample.Web, :router
+  require Ueberauth
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,14 +14,19 @@ defmodule UeberauthExample.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :auth do
+    Ueberauth.plug "/auth"
+  end
+
+  scope "/auth", UeberauthExample do
+    pipe_through [:browser, :auth]
+
+    delete "/logout", AuthController, :delete
+  end
+
   scope "/", UeberauthExample do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", UeberauthExample do
-  #   pipe_through :api
-  # end
 end
