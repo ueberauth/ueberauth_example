@@ -19,7 +19,7 @@ defmodule UeberauthExample.Mixfile do
   def application do
     [mod: {UeberauthExample, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex, :ueberauth]]
+                    :phoenix_ecto, :postgrex, :oauth2, :ueberauth]]
   end
 
   # Specifies which paths to compile per environment.

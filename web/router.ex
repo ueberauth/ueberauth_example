@@ -21,6 +21,8 @@ defmodule UeberauthExample.Router do
   scope "/auth", UeberauthExample do
     pipe_through [:browser, :auth]
 
+    get "/:provider", AuthController, :request
+    get "/:provider/callback", AuthController, :callback
     delete "/logout", AuthController, :delete
   end
 

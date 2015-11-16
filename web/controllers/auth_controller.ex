@@ -8,14 +8,14 @@ defmodule UeberauthExample.AuthController do
     |> redirect(to: "/")
   end
 
-  def callback_phase(%{ assigns: %{ ueberauth_failure: fails } } = conn, _params) do
+  def callback(%{ assigns: %{ ueberauth_failure: fails } } = conn, _params) do
     conn
     |> put_flash(:error, "Failed to authenticate.")
     |> redirect(to: "/")
   end
 
-  def callback_phase(%{ assigns: %{ ueberauth_auth: auth } } = conn, params) do
-    user = %{id: auth["uid"], name: auth["name"], avatar: auth["image"]}
+  def callback(%{ assigns: %{ ueberauth_auth: auth } } = conn, params) do
+    user = %{id: auth.uid, name: auth.info.name, avatar: auth.info.image}
     conn
     |> put_flash(:info, "Successfully authenticated.")
     |> put_session(:current_user, user)
