@@ -37,7 +37,8 @@ defmodule UeberauthExample.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:ueberauth, "~> 0.1.0"},
-     {:ueberauth_github, "~> 0.1.0"}
+     {:ueberauth_facebook, "~> 0.1"},
+     {:ueberauth_github, "~> 0.1"}
    ]
   end
 

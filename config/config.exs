@@ -28,11 +28,16 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
-
 config :ueberauth, Ueberauth,
   providers: [
+    facebook: { Ueberauth.Strategy.Facebook, [] },
     github: { Ueberauth.Strategy.Github, [] },
   ]
+
+config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
+  client_id: System.get_env("FACEBOOK_APP_ID"),
+  client_secret: System.get_env("FACEBOOK_APP_SECRET"),
+  token_url: "/oauth/access_token"
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_id: System.get_env("GITHUB_CLIENT_ID"),
