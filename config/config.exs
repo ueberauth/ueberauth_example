@@ -37,6 +37,7 @@ config :ueberauth, Ueberauth,
 config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
   client_id: System.get_env("FACEBOOK_APP_ID"),
   client_secret: System.get_env("FACEBOOK_APP_SECRET"),
+  redirect_uri: System.get_env("FACEBOOK_REDIRECT_URI"),
   token_url: "/oauth/access_token"
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
