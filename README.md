@@ -4,30 +4,39 @@
 
 This project demonstrates how to use Überauth and multiple strategies to provide authentication for a Phoenix application.  The project has been setup to run on Heroku can can be found at [ueberauth-example.herokuapp.com]().
 
+In this example we'll use three strategies:
+
++ Facebook ([doomspork/ueberauth_facebook](https://github.com/doomspork/ueberauth_facebook))
++ GitHub ([hassox/ueberauth_github](https://github.com/hassox/ueberauth_github))
++ Google ([doomspork/ueberauth_google](https://github.com/doomspork/ueberauth_google))
+
 ## Setup
 
 1. Retrieve app ids and secrets and set environment variables:
 
+	+ Facebook ([https://developers.facebook.com]())
+		+ FACEBOOK_APP_ID
+		+ FACEBOOK_APP_SECRET
 	+ GitHub ([https://developer.github.com]())
 		+ GITHUB_CLIENT_ID
 		+ GITHUB_CLIENT_SECRET
-	+ Facebook ([https://developers.facebook.com]())
-		+ FACEBOOK_APP_ID 	 	 	
-		+ FACEBOOK_APP_SECRET
+  + Google ([https://console.developers.google.com/home]())
+    + GOOGLE_CLIENT_ID
+    + GOOGLE_CLIENT_SECRET
 
 1. Clone the project:
 
 	```shell
 	$ git clone git@github.com:doomspork/ueberauth_example.git
 	$ cd ueberauth_example
-	``` 
-	
+	```
+
 1. Fetch dependecies:
 
 	```shell
 	$ mix deps.get
 	```
-	
+
 1. Run server:
 
 	```shell
@@ -35,7 +44,7 @@ This project demonstrates how to use Überauth and multiple strategies to provid
 	```
 
 1. Authenticate at [http://localhost:4000]()!
-	
+
 ## Configuration
 
 See [Überauth](https://github.com/scrogson/ueberauth) for detailed instructions.
