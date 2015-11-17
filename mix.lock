@@ -22,4 +22,5 @@
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"},
   "ueberauth": {:hex, :ueberauth, "0.1.0"},
   "ueberauth_facebook": {:hex, :ueberauth_facebook, "0.1.2"},
-  "ueberauth_github": {:hex, :ueberauth_github, "0.1.2"}}
+  "ueberauth_github": {:hex, :ueberauth_github, "0.1.2"},
+  "ueberauth_google": {:hex, :ueberauth_google, "0.1.1"}}

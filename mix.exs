@@ -38,6 +38,7 @@ defmodule UeberauthExample.Mixfile do
      {:cowboy, "~> 1.0"},
      {:ueberauth, "~> 0.1.0"},
      {:ueberauth_facebook, "~> 0.1"},
+     {:ueberauth_google, "~> 0.1"},
      {:ueberauth_github, "~> 0.1"}
    ]
   end

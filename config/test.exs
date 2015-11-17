@@ -12,8 +12,6 @@ config :logger, level: :warn
 # Configure your database
 config :ueberauth_example, UeberauthExample.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
   database: "ueberauth_example_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
