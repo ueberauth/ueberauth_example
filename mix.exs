@@ -36,7 +36,7 @@ defmodule UeberauthExample.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:ueberauth, "~> 0.1.0"},
+     {:ueberauth, github: "scrogson/ueberauth", branch: "fix_callback_url", override: true},
      {:ueberauth_facebook, "~> 0.1"},
      {:ueberauth_google, "~> 0.1"},
      {:ueberauth_github, "~> 0.1"}
