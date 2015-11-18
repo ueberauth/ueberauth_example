@@ -6,9 +6,9 @@ This project demonstrates how to use Überauth and multiple strategies to provid
 
 In this example we'll use three strategies:
 
-+ Facebook ([doomspork/ueberauth_facebook](https://github.com/doomspork/ueberauth_facebook))
-+ GitHub ([hassox/ueberauth_github](https://github.com/hassox/ueberauth_github))
-+ Google ([doomspork/ueberauth_google](https://github.com/doomspork/ueberauth_google))
++ Facebook ([ueberauth_facebook](https://github.com/ueberauth/ueberauth_facebook))
++ GitHub ([ueberauth_github](https://github.com/ueberauth/ueberauth_github))
++ Google ([ueberauth_google](https://github.com/ueberauth/ueberauth_google))
 
 ## Setup
 
@@ -27,7 +27,7 @@ In this example we'll use three strategies:
 1. Clone the project:
 
 	```shell
-	$ git clone git@github.com:doomspork/ueberauth_example.git
+	$ git clone git@github.com:ueberauth/ueberauth_example.git
 	$ cd ueberauth_example
 	```
 
@@ -47,11 +47,11 @@ In this example we'll use three strategies:
 
 ## Configuration
 
-See [Überauth](https://github.com/scrogson/ueberauth) for detailed instructions.
+See [Überauth](https://github.com/ueberauth/ueberauth) for detailed instructions.
 
 ## Contributing
 
-Contributions are welcomed and encouraged. Please make appropriate use of [Issues](https://github.com/doomspork/ueberauth_example/issues) and [Pull Requests](https://github.com/doomspork/ueberauth_example/pulls).
+Contributions are welcomed and encouraged. Please make appropriate use of [Issues](https://github.com/ueberauth/ueberauth_example/issues) and [Pull Requests](https://github.com/ueberauth/ueberauth_example/pulls).
 
 ## License
 The MIT License (MIT)
