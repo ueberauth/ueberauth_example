@@ -38,8 +38,7 @@ config :ueberauth, Ueberauth,
 config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
   client_id: System.get_env("FACEBOOK_APP_ID"),
   client_secret: System.get_env("FACEBOOK_APP_SECRET"),
-  redirect_uri: System.get_env("FACEBOOK_REDIRECT_URI"),
-  token_url: "/oauth/access_token"
+  redirect_uri: System.get_env("FACEBOOK_REDIRECT_URI")
 
 config :ueberauth, Ueberauth.Strategy.Github.OAuth,
   client_id: System.get_env("GITHUB_CLIENT_ID"),
@@ -47,4 +46,5 @@ config :ueberauth, Ueberauth.Strategy.Github.OAuth,
 
 config :ueberauth, Ueberauth.Strategy.Google.OAuth,
   client_id: System.get_env("GOOGLE_CLIENT_ID"),
-  client_secret: System.get_env("GOOGLE_CLIENT_SECRET")
+  client_secret: System.get_env("GOOGLE_CLIENT_SECRET"),
+  redirect_uri: System.get_env("GOOGLE_REDIRECT_URI")
