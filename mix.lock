@@ -20,7 +20,7 @@
   "postgrex": {:hex, :postgrex, "0.9.1"},
   "ranch": {:hex, :ranch, "1.2.0"},
   "ssl_verify_hostname": {:hex, :ssl_verify_hostname, "1.0.5"},
-  "ueberauth": {:git, "https://github.com/scrogson/ueberauth.git", "7f467cb6b102dd1cf8d43e120377cf9a703e426f", [branch: "fix_callback_url"]},
+  "ueberauth": {:git, "https://github.com/scrogson/ueberauth.git", "7f467cb6b102dd1cf8d43e120377cf9a703e426f", [branch: "master"]},
   "ueberauth_facebook": {:hex, :ueberauth_facebook, "0.1.2"},
   "ueberauth_github": {:hex, :ueberauth_github, "0.1.2"},
   "ueberauth_google": {:hex, :ueberauth_google, "0.1.1"}}
