@@ -39,7 +39,8 @@ defmodule UeberauthExample.Mixfile do
      {:ueberauth, github: "ueberauth/ueberauth", branch: "master", override: true},
      {:ueberauth_facebook, "~> 0.1"},
      {:ueberauth_google, "~> 0.1"},
-     {:ueberauth_github, "~> 0.1"}
+     {:ueberauth_github, "~> 0.1"},
+     {:ueberauth_identity, "~> 0.1"},
    ]
   end
 
