@@ -16,18 +16,18 @@ In this example we'll use five strategies:
 
 1. Retrieve app ids and secrets and set environment variables:
 
-	+ Facebook ([https://developers.facebook.com]())
+	+ Facebook ([https://developers.facebook.com](https://developers.facebook.com))
 		+ FACEBOOK_APP_ID
 		+ FACEBOOK_APP_SECRET
-	+ GitHub ([https://developer.github.com]())
+	+ GitHub ([https://developer.github.com](https://developer.github.com))
 		+ GITHUB_CLIENT_ID
 		+ GITHUB_CLIENT_SECRET
-  + Google ([https://console.developers.google.com/home]())
-    + GOOGLE_CLIENT_ID
-    + GOOGLE_CLIENT_SECRET
-  + Slack ([https://api.slack.com/applications]())
-    + SLACK_CLIENT_ID
-    + SLACK_CLIENT_SECRET
+  	+ Google ([https://console.developers.google.com/home](https://console.developers.google.com/home))
+    	+ GOOGLE_CLIENT_ID
+    	+ GOOGLE_CLIENT_SECRET
+  	+ Slack ([https://api.slack.com/applications](https://api.slack.com/applications))
+    	+ SLACK_CLIENT_ID
+    	+ SLACK_CLIENT_SECRET
 
 1. Clone the project:
 
@@ -54,30 +54,6 @@ In this example we'll use five strategies:
 
 See [Überauth](https://github.com/ueberauth/ueberauth) for detailed instructions.
 
-## Contributing
-
-Contributions are welcomed and encouraged. Please make appropriate use of [Issues](https://github.com/ueberauth/ueberauth_example/issues) and [Pull Requests](https://github.com/ueberauth/ueberauth_example/pulls).
-
 ## License
-The MIT License (MIT)
 
-Copyright (c) 2015 Sean Callan
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Please see [LICENSE](https://github.com/ueberauth/ueberauth_example/blob/master/LICENSE) for licensing details.
