@@ -32,7 +32,12 @@ config :ueberauth, Ueberauth,
   providers: [
     facebook: { Ueberauth.Strategy.Facebook, [] },
     github: { Ueberauth.Strategy.Github, [] },
-    google: { Ueberauth.Strategy.Google, [] }
+    google: { Ueberauth.Strategy.Google, [] },
+    identity: { Ueberauth.Strategy.Identity, [
+        callback_methods: ["POST"],
+        uid_field: :username,
+        nickname_field: :username,
+      ] }
   ]
 
 config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,

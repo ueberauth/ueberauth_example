@@ -26,5 +26,11 @@
       <i class="fa fa-google"></i>
       Sign in with Google
     </a>
+
+    <a class="btn btn-primary btn-lg" href="/auth/identity">
+      <i class="fa fa-identity"></i>
+      Sign in with Username/Password
+    </a>
+
   <% end %>
 </div>

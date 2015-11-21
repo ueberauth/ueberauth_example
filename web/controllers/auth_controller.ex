@@ -1,6 +1,12 @@
 defmodule UeberauthExample.AuthController do
   use UeberauthExample.Web, :controller
 
+  alias Ueberauth.Strategy.Helpers
+
+  def request(conn, _params) do
+    render(conn, "request.html", callback_url: Helpers.callback_url(conn))
+  end
+
   def delete(conn, _params) do
     conn
     |> put_flash(:info, "You have been logged out!")
@@ -15,7 +21,9 @@ defmodule UeberauthExample.AuthController do
   end
 
   def callback(%{ assigns: %{ ueberauth_auth: auth } } = conn, params) do
-    user = %{id: auth.uid, name: auth.info.name, avatar: auth.info.image}
+    name = auth.info.name || Enum.join([auth.info.first_name, auth.info.last_name], " ")
+
+    user = %{id: auth.uid, name: name, avatar: auth.info.image}
     conn
     |> put_flash(:info, "Successfully authenticated.")
     |> put_session(:current_user, user)

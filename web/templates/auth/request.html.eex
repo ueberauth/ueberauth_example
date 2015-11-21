@@ -1,0 +1,50 @@
+<%= form_tag @callback_url, method: "post" do %>
+  <div class='control-group'>
+    <label class='control-label' for='email-input'>Email</label>
+    <input class='form-control' type='email' name='email' value='<%= @conn.params["email"] %>' />
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='first-name-input'>First Name</label>
+    <input class='form-control' type='text' name='first_name' value='<%= @conn.params["first_name"] %>' />
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='last-name-input'>Last Name</label>
+    <input class='form-control' type='text' name='last_name' value='<%= @conn.params["last_name"] %>' />
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='nickname-input'>Username</label>
+    <input class='form-control' type='text' name='username' value='<%= @conn.params["username"] %>' />
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='phone-input'>Phone</label>
+    <input class='form-control' type='tel' name='phone' value='<%= @conn.params["phone"] %>' />
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='location-input'>Location</label>
+    <input class='form-control' type='text' name='location' value='<%= @conn.params["location"] %>' />
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='description-input'>Description</label>
+    <textarea class='form-control' name='description' value='<%= @conn.params["description"] %>'></textarea>
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='password-input'>Password</label>
+    <input class='form-control' type='password' name='password' />
+  </div>
+
+  <div class='control-group'>
+    <label class='control-label' for='password-confirmation-input'>Confirm Password</label>
+    <input class='form-control' type='password' name='password_confirmation' />
+  </div>
+
+  <div class='control-group'>
+    <button class='btn btn-primary'>Login</button>
+  </div>
+<% end %>
