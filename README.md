@@ -2,7 +2,7 @@
 
 > Using Überauth for authentication in Phoenix.
 
-This project demonstrates how to use Überauth and multiple strategies to provide authentication for a Phoenix application.  The project has been setup to run on Heroku can can be found at [ueberauth-example.herokuapp.com]().
+This project demonstrates how to use Überauth and multiple strategies to provide authentication for a Phoenix application.  The project has been setup to run on Heroku can can be found at [ueberauth-example.herokuapp.com](https://ueberauth-example.herokuapp.com).
 
 In this example we'll use three strategies:
 
@@ -43,7 +43,7 @@ In this example we'll use three strategies:
 	$ mix phoenix.server
 	```
 
-1. Authenticate at [http://localhost:4000]()!
+1. Authenticate at [http://localhost:4000](http://localhost:4000)!
 
 ## Configuration
 
