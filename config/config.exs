@@ -37,7 +37,8 @@ config :ueberauth, Ueberauth,
         callback_methods: ["POST"],
         uid_field: :username,
         nickname_field: :username,
-      ] }
+      ] },
+    slack: { Ueberauth.Strategy.Slack, [] }
   ]
 
 config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
@@ -53,3 +54,7 @@ config :ueberauth, Ueberauth.Strategy.Google.OAuth,
   client_id: System.get_env("GOOGLE_CLIENT_ID"),
   client_secret: System.get_env("GOOGLE_CLIENT_SECRET"),
   redirect_uri: System.get_env("GOOGLE_REDIRECT_URI")
+
+config :ueberauth, Ueberauth.Strategy.Slack.OAuth,
+  client_id: System.get_env("SLACK_CLIENT_ID"),
+  client_secret: System.get_env("SLACK_CLIENT_SECRET")
