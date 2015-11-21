@@ -41,6 +41,7 @@ defmodule UeberauthExample.Mixfile do
      {:ueberauth_google, "~> 0.1"},
      {:ueberauth_github, "~> 0.1"},
      {:ueberauth_identity, "~> 0.1"},
+     {:ueberauth_slack, "~> 0.1"}
    ]
   end
 

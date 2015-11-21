@@ -4,11 +4,13 @@
 
 This project demonstrates how to use Überauth and multiple strategies to provide authentication for a Phoenix application.  The project has been setup to run on Heroku can can be found at [ueberauth-example.herokuapp.com](https://ueberauth-example.herokuapp.com).
 
-In this example we'll use three strategies:
+In this example we'll use five strategies:
 
 + Facebook ([ueberauth_facebook](https://github.com/ueberauth/ueberauth_facebook))
 + GitHub ([ueberauth_github](https://github.com/ueberauth/ueberauth_github))
 + Google ([ueberauth_google](https://github.com/ueberauth/ueberauth_google))
++ Slack ([ueberauth_slack](https://github.com/ueberauth/ueberauth_slack))
++ Identity ([ueberauth_identity](https://github.com/ueberauth/ueberauth_identity))
 
 ## Setup
 
@@ -23,6 +25,9 @@ In this example we'll use three strategies:
   + Google ([https://console.developers.google.com/home]())
     + GOOGLE_CLIENT_ID
     + GOOGLE_CLIENT_SECRET
+  + Slack ([https://api.slack.com/applications]())
+    + SLACK_CLIENT_ID
+    + SLACK_CLIENT_SECRET
 
 1. Clone the project:
 
