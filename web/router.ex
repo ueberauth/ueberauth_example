@@ -14,12 +14,13 @@ defmodule UeberauthExample.Router do
     plug :accepts, ["json"]
   end
 
-  pipeline :auth do
-    Ueberauth.plug "/auth"
+  pipeline :session_auth do
+    plug Guardian.Plug.VerifySession
+    plug Guardian.Plug.LoadResource
   end
 
   scope "/auth", UeberauthExample do
-    pipe_through [:browser, :auth]
+    pipe_through [:browser, :session_auth]
 
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
@@ -28,7 +29,7 @@ defmodule UeberauthExample.Router do
   end
 
   scope "/", UeberauthExample do
-    pipe_through :browser # Use the default browser stack
+    pipe_through [:browser, :session_auth] # Use the default browser stack
 
     get "/", PageController, :index
   end
