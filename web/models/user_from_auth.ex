@@ -1,17 +1,18 @@
 defmodule UserFromAuth do
   alias Ueberauth.Auth
   alias Ueberauth.Auth.Credentials
+  alias UeberauthExample.User
 
   def find_or_create(%Auth{provider: :identity} = auth) do
     case validate_password(auth.credentials) do
       :ok ->
-        {:ok, %{id: auth.uid, name: name_from_auth(auth), avatar: auth.info.image}}
+        {:ok, %User{id: auth.uid, name: name_from_auth(auth), avatar: auth.info.image}}
       { :error, reason } -> {:error, reason}
     end
   end
 
   def find_or_create(%Auth{} = auth) do
-    {:ok, %{id: auth.uid, name: name_from_auth(auth), avatar: auth.info.image}}
+    {:ok, %User{id: auth.uid, name: name_from_auth(auth), avatar: auth.info.image}}
   end
 
   defp name_from_auth(auth) do

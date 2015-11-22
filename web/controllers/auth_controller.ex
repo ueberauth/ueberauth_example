@@ -1,5 +1,8 @@
 defmodule UeberauthExample.AuthController do
   use UeberauthExample.Web, :controller
+  require Ueberauth
+
+  Ueberauth.plug "/auth"
 
   alias Ueberauth.Strategy.Helpers
 
@@ -9,6 +12,7 @@ defmodule UeberauthExample.AuthController do
 
   def delete(conn, _params) do
     conn
+    |> Guardian.Plug.sign_out
     |> put_flash(:info, "You have been logged out!")
     |> configure_session(drop: true)
     |> redirect(to: "/")
@@ -24,8 +28,8 @@ defmodule UeberauthExample.AuthController do
     case UserFromAuth.find_or_create(auth) do
       {:ok, user} ->
         conn
+        |> Guardian.Plug.sign_in(user)
         |> put_flash(:info, "Successfully authenticated.")
-        |> put_session(:current_user, user)
         |> redirect(to: "/")
       {:error, reason} ->
         conn
