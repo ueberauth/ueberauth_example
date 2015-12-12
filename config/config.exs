@@ -38,7 +38,8 @@ config :ueberauth, Ueberauth,
         uid_field: :username,
         nickname_field: :username,
       ] },
-    slack: { Ueberauth.Strategy.Slack, [] }
+    slack: { Ueberauth.Strategy.Slack, [] },
+    twitter: { Ueberauth.Strategy.Twitter, []}
   ]
 
 config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
@@ -58,3 +59,7 @@ config :ueberauth, Ueberauth.Strategy.Google.OAuth,
 config :ueberauth, Ueberauth.Strategy.Slack.OAuth,
   client_id: System.get_env("SLACK_CLIENT_ID"),
   client_secret: System.get_env("SLACK_CLIENT_SECRET")
+
+config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
+  consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
+  consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET")
