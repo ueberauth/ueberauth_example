@@ -1,5 +1,6 @@
 defmodule UeberauthExample.AuthController do
   use UeberauthExample.Web, :controller
+  plug Ueberauth
 
   alias Ueberauth.Strategy.Helpers
 
