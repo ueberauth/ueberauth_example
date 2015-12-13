@@ -14,12 +14,8 @@ defmodule UeberauthExample.Router do
     plug :accepts, ["json"]
   end
 
-  pipeline :auth do
-    Ueberauth.plug "/auth"
-  end
-
   scope "/auth", UeberauthExample do
-    pipe_through [:browser, :auth]
+    pipe_through [:browser]
 
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback

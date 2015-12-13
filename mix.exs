@@ -18,8 +18,19 @@ defmodule UeberauthExample.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {UeberauthExample, []},
-     applications: [:phoenix, :phoenix_html, :cowboy, :logger,
-                    :phoenix_ecto, :postgrex, :oauth2, :ueberauth]]
+     applications: [:phoenix,
+                    :phoenix_html,
+                    :cowboy,
+                    :logger,
+                    :phoenix_ecto,
+                    :postgrex,
+                    :oauth,
+                    :ueberauth_facebook,
+                    :ueberauth_google,
+                    :ueberauth_github,
+                    :ueberauth_identity,
+                    :ueberauth_slack,
+                    :ueberauth_twitter]]
   end
 
   # Specifies which paths to compile per environment.
@@ -36,12 +47,14 @@ defmodule UeberauthExample.Mixfile do
      {:phoenix_html, "~> 2.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:ueberauth, github: "ueberauth/ueberauth", branch: "master", override: true},
-     {:ueberauth_facebook, "~> 0.1"},
-     {:ueberauth_google, "~> 0.1"},
-     {:ueberauth_github, "~> 0.1"},
-     {:ueberauth_identity, "~> 0.1"},
-     {:ueberauth_slack, "~> 0.1"}
+     {:ueberauth, "~> 0.2"},
+     {:oauth, github: "tim/erlang-oauth"},
+     {:ueberauth_facebook, "~> 0.2"},
+     {:ueberauth_google, "~> 0.2"},
+     {:ueberauth_github, "~> 0.2"},
+     {:ueberauth_identity, "~> 0.2"},
+     {:ueberauth_slack, "~> 0.2"},
+     {:ueberauth_twitter, "~> 0.2"}
    ]
   end
 
