@@ -43,7 +43,7 @@ In this example we'll use five strategies:
 1. Fetch dependecies:
 
 	```shell
-	$ mix deps.get
+	$ mix deps.get && npm install
 	```
 
 1. Run server:
