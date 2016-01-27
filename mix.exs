@@ -4,7 +4,7 @@ defmodule UeberauthExample.Mixfile do
   def project do
     [app: :ueberauth_example,
      version: "0.0.1",
-     elixir: "~> 1.0",
+     elixir: "~> 1.2",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -41,10 +41,10 @@ defmodule UeberauthExample.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.0.3"},
-     {:phoenix_ecto, "~> 1.1"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.1"},
+    [{:phoenix, "~> 1.1"},
+     {:phoenix_ecto, "~> 2.0"},
+     {:postgrex, ">= 0.0.0", override: true},
+     {:phoenix_html, "~> 2.5"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:ueberauth, "~> 0.2"},
