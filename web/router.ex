@@ -1,4 +1,6 @@
 defmodule UeberauthExample.Router do
+  @moduledoc false
+
   use UeberauthExample.Web, :router
   require Ueberauth
 
