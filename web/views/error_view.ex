@@ -1,4 +1,6 @@
 defmodule UeberauthExample.ErrorView do
+  @moduledoc false
+
   use UeberauthExample.Web, :view
 
   def render("404.html", _assigns) do

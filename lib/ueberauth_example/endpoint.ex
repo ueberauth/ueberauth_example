@@ -1,4 +1,6 @@
 defmodule UeberauthExample.Endpoint do
+  @moduledoc false
+
   use Phoenix.Endpoint, otp_app: :ueberauth_example
 
   socket "/socket", UeberauthExample.UserSocket

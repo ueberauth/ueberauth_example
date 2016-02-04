@@ -9,7 +9,6 @@ use Mix.Config
 config :ueberauth_example, UeberauthExample.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "5XyBxeKtff/qlbxv8Yr7PqaU/8JXuSkFeB3xGMbhBO/wDJRNQRyQSN8SMOosyBM+",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: UeberauthExample.PubSub,
            adapter: Phoenix.PubSub.PG2]
@@ -63,3 +62,6 @@ config :ueberauth, Ueberauth.Strategy.Slack.OAuth,
 config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
   consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
   consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET")
+
+config :dogma,
+  rule_set: Dogma.RuleSet.All

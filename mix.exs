@@ -4,7 +4,7 @@ defmodule UeberauthExample.Mixfile do
   def project do
     [app: :ueberauth_example,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.1",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -54,7 +54,9 @@ defmodule UeberauthExample.Mixfile do
      {:ueberauth_github, "~> 0.2"},
      {:ueberauth_identity, "~> 0.2"},
      {:ueberauth_slack, "~> 0.2"},
-     {:ueberauth_twitter, "~> 0.2"}
+     {:ueberauth_twitter, "~> 0.2"},
+
+     {:dogma, ">= 0.0.0", only: [:dev, :test]}
    ]
   end
 

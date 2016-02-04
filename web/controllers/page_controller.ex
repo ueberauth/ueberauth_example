@@ -1,4 +1,8 @@
 defmodule UeberauthExample.PageController do
+  @moduledoc """
+  Static page controller
+  """
+
   use UeberauthExample.Web, :controller
 
   def index(conn, _params) do

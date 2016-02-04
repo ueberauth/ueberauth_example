@@ -39,17 +39,17 @@ defmodule UeberauthExample.ModelCase do
   Given a User model that lists `:name` as a required field and validates
   `:password` to be safe, it would return:
 
-      iex> errors_on(%User{}, %{password: "password"})
+      iex> errors_on(%User{}, %{password: "pass"})
       [password: "is unsafe", name: "is blank"]
 
   You could then write your assertion like:
 
-      assert {:password, "is unsafe"} in errors_on(%User{}, %{password: "password"})
+      assert {:password, "is unsafe"} in errors_on(%User{}, %{password: "pass"})
 
   You can also create the changeset manually and retrieve the errors
   field directly:
 
-      iex> changeset = User.changeset(%User{}, password: "password")
+      iex> changeset = User.changeset(%User{}, password: "pass")
       iex> {:password, "is unsafe"} in changeset.errors
       true
   """
