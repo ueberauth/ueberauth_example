@@ -17,7 +17,7 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li>
-            <a href="https://github.com/doomspork/ueberauthscrogsonscrogson_example">
+            <a href="https://github.com/ueberauth/ueberauth_example">
               <i class="fa fa-github"></i>
               View on GitHub
             </a>
