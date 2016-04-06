@@ -9,6 +9,7 @@ use Mix.Config
 config :ueberauth_example, UeberauthExample.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
+  secret_key_base: "tm1EKIP0vTs9HwFroFwPEC/H3FdFr/n2LYg75Xgr1x58HVA6QDoiN4yD",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: UeberauthExample.PubSub,
            adapter: Phoenix.PubSub.PG2]
