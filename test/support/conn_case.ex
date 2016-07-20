@@ -32,8 +32,10 @@ defmodule UeberauthExample.ConnCase do
   end
 
   setup tags do
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(UeberauthExample.Repo)
+
     unless tags[:async] do
-      Ecto.Adapters.SQL.restart_test_transaction(UeberauthExample.Repo, [])
+      Ecto.Adapters.SQL.Sandbox.mode(UeberauthExample.Repo, {:shared, self()})
     end
 
     :ok
