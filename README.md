@@ -21,6 +21,11 @@ In this example we'll use five strategies:
 
 ## Setup
 
+1. Ensure the following prerequisites are met/installed:
+
+  + Erlang 19
+  + Elixir 1.3
+
 1. Retrieve app ids and secrets and set environment variables:
 
 	+ Facebook ([https://developers.facebook.com](https://developers.facebook.com))

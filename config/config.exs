@@ -10,6 +10,7 @@ config :ueberauth_example, UeberauthExample.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   render_errors: [accepts: ~w(html json)],
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   pubsub: [name: UeberauthExample.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
@@ -17,6 +18,9 @@ config :ueberauth_example, UeberauthExample.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
+
+# Configure the Ecto Repos
+config :ueberauth_example, ecto_repos: [UeberauthExample.Repo]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

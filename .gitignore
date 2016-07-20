@@ -4,6 +4,9 @@
 erl_crash.dump
 *.ez
 
+### Node ###
+node_modules
+priv/static
 
 ### OSX ###
 .DS_Store

@@ -4,7 +4,7 @@ defmodule UeberauthExample.Mixfile do
   def project do
     [app: :ueberauth_example,
      version: "0.0.1",
-     elixir: "~> 1.1",
+     elixir: "~> 1.3",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -41,15 +41,15 @@ defmodule UeberauthExample.Mixfile do
   #
   # Type `mix help deps` for examples and options.
   defp deps do
-    [{:phoenix, "~> 1.1"},
-     {:phoenix_ecto, "~> 2.0"},
-     {:postgrex, ">= 0.0.0", override: true},
-     {:phoenix_html, "~> 2.5"},
+    [{:phoenix, "~> 1.2"},
+     {:phoenix_ecto, "~> 3.0.0-rc"},
+     {:postgrex, ">= 0.11.1", override: true},
+     {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:ueberauth, "~> 0.2"},
      {:oauth, github: "tim/erlang-oauth"},
-     {:ueberauth_facebook, "~> 0.2"},
+     {:ueberauth_facebook, "~> 0.4"},
      {:ueberauth_google, "~> 0.2"},
      {:ueberauth_github, "~> 0.2"},
      {:ueberauth_identity, "~> 0.2"},
@@ -68,6 +68,7 @@ defmodule UeberauthExample.Mixfile do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-     "ecto.reset": ["ecto.drop", "ecto.setup"]]
+     "ecto.reset": ["ecto.drop", "ecto.setup"],
+     "test": ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 end
