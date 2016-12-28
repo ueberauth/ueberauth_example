@@ -9,10 +9,10 @@ defmodule UeberauthExample do
     import Supervisor.Spec, warn: false
 
     children = [
+      # Start the Ecto repository
+      supervisor(UeberauthExample.Repo, []),
       # Start the endpoint when the application starts
       supervisor(UeberauthExample.Endpoint, []),
-      # Start the Ecto repository
-      worker(UeberauthExample.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(UeberauthExample.Worker, [arg1, arg2, arg3]),
     ]

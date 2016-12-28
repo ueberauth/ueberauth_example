@@ -21,7 +21,7 @@ defmodule UeberauthExample.ChannelCase do
       use Phoenix.ChannelTest
 
       alias UeberauthExample.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 2]
 
 

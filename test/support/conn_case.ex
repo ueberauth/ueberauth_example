@@ -21,7 +21,7 @@ defmodule UeberauthExample.ConnCase do
       use Phoenix.ConnTest
 
       alias UeberauthExample.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 2]
 
       import UeberauthExample.Router.Helpers

@@ -17,7 +17,7 @@ defmodule UeberauthExample.ModelCase do
   using do
     quote do
       alias UeberauthExample.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 2]
       import UeberauthExample.ModelCase
     end
