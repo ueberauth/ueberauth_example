@@ -42,19 +42,21 @@ defmodule UeberauthExample.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [{:phoenix, "~> 1.2"},
-     {:phoenix_ecto, "~> 3.0.0-rc"},
-     {:postgrex, ">= 0.11.1", override: true},
-     {:phoenix_html, "~> 2.6"},
+     {:phoenix_ecto, "~> 3.2"},
+     {:postgrex, "~> 0.13"},
+     {:phoenix_html, "~> 2.9"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
-     {:ueberauth, "~> 0.2"},
+     {:ueberauth, "~> 0.4"},
+     {:oauth2, "~> 0.8", override: true},
      {:oauth, github: "tim/erlang-oauth"},
-     {:ueberauth_facebook, "~> 0.4"},
-     {:ueberauth_google, "~> 0.2"},
-     {:ueberauth_github, "~> 0.2"},
+     {:ueberauth_facebook, "~> 0.5"},
+     {:ueberauth_google, "~> 0.5"},
+     {:ueberauth_github, "~> 0.4"},
      {:ueberauth_identity, "~> 0.2"},
-     {:ueberauth_slack, "~> 0.2"},
+     {:ueberauth_slack, "~> 0.4"},
      {:ueberauth_twitter, "~> 0.2"},
+     {:poison, "~> 3.0", override: true},
 
      {:dogma, ">= 0.0.0", only: [:dev, :test]}
    ]

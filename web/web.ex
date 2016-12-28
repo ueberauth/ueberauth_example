@@ -30,7 +30,7 @@ defmodule UeberauthExample.Web do
       use Phoenix.Controller
 
       alias UeberauthExample.Repo
-      import Ecto.Model
+      import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
       import UeberauthExample.Router.Helpers
