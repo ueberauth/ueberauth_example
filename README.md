@@ -10,7 +10,7 @@
 
 This project demonstrates how to use Überauth and multiple strategies to provide authentication for a Phoenix application.  The project has been setup to run on Heroku can can be found at [ueberauth-example.herokuapp.com](https://ueberauth-example.herokuapp.com).
 
-In this example we'll use five strategies:
+In this example we'll use the following strategies:
 
 + Facebook ([ueberauth_facebook](https://github.com/ueberauth/ueberauth_facebook))
 + GitHub ([ueberauth_github](https://github.com/ueberauth/ueberauth_github))
@@ -18,6 +18,7 @@ In this example we'll use five strategies:
 + Slack ([ueberauth_slack](https://github.com/ueberauth/ueberauth_slack))
 + Twitter ([ueberauth_twitter](https://github.com/ueberauth/ueberauth_twitter))
 + Identity ([ueberauth_identity](https://github.com/ueberauth/ueberauth_identity))
++ Auth0 ([ueberauth_auth0](https://github.com/sntran/ueberauth_auth0))
 
 ## Setup
 
@@ -28,12 +29,12 @@ In this example we'll use five strategies:
 
 1. Retrieve app ids and secrets and set environment variables:
 
-	+ Facebook ([https://developers.facebook.com](https://developers.facebook.com))
-		+ FACEBOOK_APP_ID
-		+ FACEBOOK_APP_SECRET
-	+ GitHub ([https://developer.github.com](https://developer.github.com))
-		+ GITHUB_CLIENT_ID
-		+ GITHUB_CLIENT_SECRET
+  + Facebook ([https://developers.facebook.com](https://developers.facebook.com))
+    + FACEBOOK_APP_ID
+    + FACEBOOK_APP_SECRET
+  + GitHub ([https://developer.github.com](https://developer.github.com))
+    + GITHUB_CLIENT_ID
+    + GITHUB_CLIENT_SECRET
   + Google ([https://console.developers.google.com/home](https://console.developers.google.com/home))
     + GOOGLE_CLIENT_ID
     + GOOGLE_CLIENT_SECRET
@@ -43,25 +44,29 @@ In this example we'll use five strategies:
   + Twitter ([https://dev.twitter.com](https://dev.twitter.com))
     + TWITTER_CONSUMER_KEY
     + TWITTER_CONSUMER_SECRET
+  + Auth0 ([https://manage.auth0.com](https://manage.auth0.com/#/clients))
+    + AUTH0_DOMAIN
+    + AUTH0_CLIENT_ID
+    + AUTH0_CLIENT_SECRET
 
 1. Clone the project:
 
-	```shell
-	$ git clone git@github.com:ueberauth/ueberauth_example.git
-	$ cd ueberauth_example
-	```
+  ```shell
+  $ git clone git@github.com:ueberauth/ueberauth_example.git
+  $ cd ueberauth_example
+  ```
 
 1. Fetch dependecies:
 
-	```shell
-	$ mix deps.get && npm install
-	```
+  ```shell
+  $ mix deps.get && npm install
+  ```
 
 1. Run server:
 
-	```shell
-	$ mix phoenix.server
-	```
+  ```shell
+  $ mix phoenix.server
+  ```
 
 1. Authenticate at [http://localhost:4000](http://localhost:4000)!
 

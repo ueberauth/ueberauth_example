@@ -30,7 +30,8 @@ defmodule UeberauthExample.Mixfile do
                     :ueberauth_github,
                     :ueberauth_identity,
                     :ueberauth_slack,
-                    :ueberauth_twitter]]
+                    :ueberauth_twitter,
+                    :ueberauth_auth0]]
   end
 
   # Specifies which paths to compile per environment.
@@ -55,6 +56,7 @@ defmodule UeberauthExample.Mixfile do
      {:ueberauth_identity, "~> 0.2"},
      {:ueberauth_slack, "~> 0.2"},
      {:ueberauth_twitter, "~> 0.2"},
+     {:ueberauth_auth0, "~> 0.2"},
 
      {:dogma, ">= 0.0.0", only: [:dev, :test]}
    ]
