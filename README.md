@@ -1,7 +1,7 @@
 # Überauth Example
 [![Build Status][travis-img]][travis] [![License][license-img]][license]
 
-[travis-img]: https://travis-ci.org/ueberauth/ueberauth_example.png?branch=master
+[travis-img]: https://travis-ci.org/ueberauth/ueberauth_example.svg?branch=master
 [travis]: https://travis-ci.org/ueberauth/ueberauth_example
 [license-img]: http://img.shields.io/badge/license-MIT-brightgreen.svg
 [license]: http://opensource.org/licenses/MIT
