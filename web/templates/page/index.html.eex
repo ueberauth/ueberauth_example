@@ -41,5 +41,10 @@
       <i class="fa fa-user"></i>
       Sign in with Username/Password
     </a>
+
+    <a class="btn btn-primary btn-lg" href="/auth/auth0">
+      <i class="fa fa-user"></i>
+      Sign in with Auth0
+    </a>
   <% end %>
 </div>

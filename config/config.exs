@@ -42,7 +42,8 @@ config :ueberauth, Ueberauth,
         nickname_field: :username,
       ] },
     slack: { Ueberauth.Strategy.Slack, [] },
-    twitter: { Ueberauth.Strategy.Twitter, []}
+    twitter: { Ueberauth.Strategy.Twitter, []},
+    auth0: {Ueberauth.Strategy.Auth0, []}
   ]
 
 config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
@@ -66,6 +67,11 @@ config :ueberauth, Ueberauth.Strategy.Slack.OAuth,
 config :ueberauth, Ueberauth.Strategy.Twitter.OAuth,
   consumer_key: System.get_env("TWITTER_CONSUMER_KEY"),
   consumer_secret: System.get_env("TWITTER_CONSUMER_SECRET")
+
+config :ueberauth, Ueberauth.Strategy.Auth0.OAuth,
+  domain: System.get_env("AUTH0_DOMAIN"),
+  client_id: System.get_env("AUTH0_CLIENT_ID"),
+  client_secret: System.get_env("AUTH0_CLIENT_SECRET")
 
 config :dogma,
   rule_set: Dogma.RuleSet.All
