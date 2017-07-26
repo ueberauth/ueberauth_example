@@ -34,15 +34,15 @@ In this example we'll use five strategies:
 	+ GitHub ([https://developer.github.com](https://developer.github.com))
 		+ GITHUB_CLIENT_ID
 		+ GITHUB_CLIENT_SECRET
-  + Google ([https://console.developers.google.com/home](https://console.developers.google.com/home))
-    + GOOGLE_CLIENT_ID
-    + GOOGLE_CLIENT_SECRET
-  + Slack ([https://api.slack.com/applications](https://api.slack.com/applications))
-    + SLACK_CLIENT_ID
-    + SLACK_CLIENT_SECRET
-  + Twitter ([https://dev.twitter.com](https://dev.twitter.com))
-    + TWITTER_CONSUMER_KEY
-    + TWITTER_CONSUMER_SECRET
+	+ Google ([https://console.developers.google.com/home](https://console.developers.google.com/home))
+		+ GOOGLE_CLIENT_ID
+		+ GOOGLE_CLIENT_SECRET
+	+ Slack ([https://api.slack.com/applications](https://api.slack.com/applications))
+		+ SLACK_CLIENT_ID
+		+ SLACK_CLIENT_SECRET
+	+ Twitter ([https://dev.twitter.com](https://dev.twitter.com))
+		+ TWITTER_CONSUMER_KEY
+		+ TWITTER_CONSUMER_SECRET
 
 1. Clone the project:
 
