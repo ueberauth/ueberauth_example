@@ -1,3 +1,3 @@
 defmodule UeberauthExample.LayoutViewTest do
-  use UeberauthExample.ConnCase, async: true
+  use UeberauthExampleWeb.ConnCase, async: true
 end

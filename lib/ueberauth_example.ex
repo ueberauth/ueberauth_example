@@ -26,7 +26,7 @@ defmodule UeberauthExample do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    UeberauthExample.Endpoint.config_change(changed, removed)
+    UeberauthExampleWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end
