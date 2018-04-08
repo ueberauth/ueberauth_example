@@ -1,7 +1,7 @@
-defmodule UeberauthExample.ErrorView do
+defmodule UeberauthExampleWeb.ErrorView do
   @moduledoc false
 
-  use UeberauthExample.Web, :view
+  use UeberauthExampleWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

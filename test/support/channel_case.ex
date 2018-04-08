@@ -1,4 +1,4 @@
-defmodule UeberauthExample.ChannelCase do
+defmodule UeberauthExampleWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -26,7 +26,7 @@ defmodule UeberauthExample.ChannelCase do
 
 
       # The default endpoint for testing
-      @endpoint UeberauthExample.Endpoint
+      @endpoint UeberauthExampleWeb.Endpoint
     end
   end
 

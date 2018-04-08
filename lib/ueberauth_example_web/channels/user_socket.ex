@@ -1,4 +1,4 @@
-defmodule UeberauthExample.UserSocket do
+defmodule UeberauthExampleWeb.UserSocket do
   @moduledoc false
 
   use Phoenix.Socket

@@ -1,5 +1,5 @@
 defmodule UeberauthExample.PageControllerTest do
-  use UeberauthExample.ConnCase
+  use UeberauthExampleWeb.ConnCase
 
   test "GET /" do
     conn = get build_conn(), "/"

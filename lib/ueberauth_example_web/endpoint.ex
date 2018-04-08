@@ -1,9 +1,9 @@
-defmodule UeberauthExample.Endpoint do
+defmodule UeberauthExampleWeb.Endpoint do
   @moduledoc false
 
   use Phoenix.Endpoint, otp_app: :ueberauth_example
 
-  socket "/socket", UeberauthExample.UserSocket
+  socket "/socket", UeberauthExampleWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -37,5 +37,5 @@ defmodule UeberauthExample.Endpoint do
     key: "_ueberauth_example_key",
     signing_salt: "pJYawTy2"
 
-  plug UeberauthExample.Router
+  plug UeberauthExampleWeb.Router
 end
