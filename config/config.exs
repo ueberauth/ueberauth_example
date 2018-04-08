@@ -6,7 +6,7 @@
 use Mix.Config
 
 # Configures the endpoint
-config :ueberauth_example, UeberauthExample.Endpoint,
+config :ueberauth_example, UeberauthExampleWeb.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   render_errors: [accepts: ~w(html json)],

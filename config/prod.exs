@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :ueberauth_example, UeberauthExample.Endpoint,
+config :ueberauth_example, UeberauthExampleWeb.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "ueberauth-example.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],

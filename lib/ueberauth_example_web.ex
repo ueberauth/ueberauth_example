@@ -1,4 +1,4 @@
-defmodule UeberauthExample.Web do
+defmodule UeberauthExampleWeb do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
@@ -27,19 +27,21 @@ defmodule UeberauthExample.Web do
 
   def controller do
     quote do
-      use Phoenix.Controller
+      use Phoenix.Controller, namespace: UeberauthExampleWeb
+
 
       alias UeberauthExample.Repo
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import UeberauthExample.Router.Helpers
+      import UeberauthExampleWeb.Router.Helpers
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "web/templates"
+      use Phoenix.View, root: "lib/ueberauth_example_web/templates",
+                                namespace: UeberauthExampleWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0,
@@ -49,7 +51,7 @@ defmodule UeberauthExample.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import UeberauthExample.Router.Helpers
+      import UeberauthExampleWeb.Router.Helpers
     end
   end
 

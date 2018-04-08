@@ -1,4 +1,4 @@
-defmodule UeberauthExample.ConnCase do
+defmodule UeberauthExampleWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -24,10 +24,10 @@ defmodule UeberauthExample.ConnCase do
       import Ecto
       import Ecto.Query, only: [from: 2]
 
-      import UeberauthExample.Router.Helpers
+      import UeberauthExampleWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint UeberauthExample.Endpoint
+      @endpoint UeberauthExampleWeb.Endpoint
     end
   end
 
