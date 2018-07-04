@@ -1,4 +1,4 @@
-defmodule UeberauthExample.AuthView do
+defmodule UeberauthExampleWeb.AuthView do
   @moduledoc false
 
   use UeberauthExampleWeb, :view
