@@ -9,8 +9,8 @@ defmodule UeberauthExample.Mixfile do
      compilers: [:phoenix] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     aliases: aliases,
-     deps: deps]
+     aliases: aliases(),
+     deps: deps()]
   end
 
   # Configuration for the OTP application.
@@ -44,7 +44,7 @@ defmodule UeberauthExample.Mixfile do
     [{:phoenix, "~> 1.3.2"},
      {:phoenix_ecto, "~> 3.2"},
      {:postgrex, "~> 0.13"},
-     {:phoenix_html, "~> 2.9"},
+     {:phoenix_html, "~> 2.10.3"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:cowboy, "~> 1.0"},
      {:ueberauth, "~> 0.4"},
