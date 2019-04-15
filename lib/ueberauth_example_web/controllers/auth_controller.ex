@@ -31,6 +31,7 @@ defmodule UeberauthExampleWeb.AuthController do
         conn
         |> put_flash(:info, "Successfully authenticated.")
         |> put_session(:current_user, user)
+        |> configure_session(renew: true)
         |> redirect(to: "/")
       {:error, reason} ->
         conn
