@@ -22,7 +22,7 @@ defmodule UeberauthExampleWeb.Router do
     get "/:provider", AuthController, :request
     get "/:provider/callback", AuthController, :callback
     post "/:provider/callback", AuthController, :callback
-    delete "/logout", AuthController, :delete
+    post "/logout", AuthController, :delete
   end
 
   scope "/", UeberauthExampleWeb do

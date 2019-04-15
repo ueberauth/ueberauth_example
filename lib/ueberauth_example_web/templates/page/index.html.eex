@@ -9,7 +9,7 @@
   <%= if @current_user do %>
     <h2>Welcome, <%= @current_user.name %>!</h2>
     <img src="<%= @current_user.avatar %>" class="img-circle"/>
-    <%= button "Logout", to: auth_path(@conn, :delete), method: :delete, class: "btn btn-danger" %>
+    <%= button "Logout", to: auth_path(@conn, :delete), method: :post, class: "btn btn-danger" %>
     <br>
   <% else %>
     <a class="btn btn-primary btn-lg" href="/auth/github">
