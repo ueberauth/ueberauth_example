@@ -54,7 +54,7 @@ In this example we'll use five strategies:
 1. Fetch dependecies:
 
 	```shell
-	$ mix deps.get && npm install
+	$ mix deps.get && npm install --prefix assets
 	```
 
 1. Run server:
