@@ -51,7 +51,7 @@ In this example we'll use five strategies:
 	$ cd ueberauth_example
 	```
 
-1. Fetch dependecies:
+1. Fetch dependencies:
 
 	```shell
 	$ mix deps.get && npm install --prefix assets
