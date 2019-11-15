@@ -15,7 +15,7 @@ defmodule UeberauthExampleWeb.AuthController do
   def delete(conn, _params) do
     conn
     |> put_flash(:info, "You have been logged out!")
-    |> configure_session(drop: true)
+    |> clear_session()
     |> redirect(to: "/")
   end
 
