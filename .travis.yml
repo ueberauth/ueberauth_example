@@ -13,5 +13,6 @@ notifications:
   email: false
 script:
   - mix compile --warnings-as-errors
+  - mix format --check-formatted --dry-run
+  - mix credo --strict
   - mix test
-  - ix format --check-formatted --dry-run

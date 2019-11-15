@@ -63,7 +63,8 @@ defmodule UeberauthExample.Mixfile do
       {:ueberauth_identity, "~> 0.2"},
       {:ueberauth_slack, "~> 0.4"},
       {:ueberauth_twitter, "~> 0.2"},
-      {:poison, "~> 3.0", override: true}
+      {:poison, "~> 3.0", override: true},
+      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false}
     ]
   end
 
