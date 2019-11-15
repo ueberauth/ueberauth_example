@@ -15,12 +15,15 @@ defmodule UeberauthExampleWeb.ChannelCase do
 
   use ExUnit.CaseTemplate
 
+  alias Ecto.Adapters.SQL.Sandbox
+  alias UeberauthExample.Repo
+
   using do
     quote do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-      alias UeberauthExample.Repo
+      alias Repo
       import Ecto
       import Ecto.Query, only: [from: 2]
 
@@ -30,10 +33,10 @@ defmodule UeberauthExampleWeb.ChannelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(UeberauthExample.Repo)
+    :ok = Sandbox.checkout(Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(UeberauthExample.Repo, {:shared, self()})
+      Sandbox.mode(Repo, {:shared, self()})
     end
 
     :ok

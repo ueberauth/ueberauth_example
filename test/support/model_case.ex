@@ -13,6 +13,7 @@ defmodule UeberauthExample.ModelCase do
   """
 
   use ExUnit.CaseTemplate
+  alias Ecto.Adapters.SQL.Sandbox
 
   using do
     quote do
@@ -24,10 +25,10 @@ defmodule UeberauthExample.ModelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(UeberauthExample.Repo)
+    :ok = Sandbox.checkout(UeberauthExample.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(UeberauthExample.Repo, {:shared, self()})
+      Sandbox.mode(UeberauthExample.Repo, {:shared, self()})
     end
 
     :ok
