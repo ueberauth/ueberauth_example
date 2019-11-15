@@ -14,3 +14,4 @@ notifications:
 script:
   - mix compile --warnings-as-errors
   - mix test
+  - ix format --check-formatted --dry-run

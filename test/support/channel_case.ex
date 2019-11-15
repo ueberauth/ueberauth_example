@@ -24,7 +24,6 @@ defmodule UeberauthExampleWeb.ChannelCase do
       import Ecto
       import Ecto.Query, only: [from: 2]
 
-
       # The default endpoint for testing
       @endpoint UeberauthExampleWeb.Endpoint
     end

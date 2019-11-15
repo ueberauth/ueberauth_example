@@ -4,7 +4,7 @@ defmodule UeberauthExampleWeb.AuthController do
   """
 
   use UeberauthExampleWeb, :controller
-  plug Ueberauth
+  plug(Ueberauth)
 
   alias Ueberauth.Strategy.Helpers
 
@@ -33,6 +33,7 @@ defmodule UeberauthExampleWeb.AuthController do
         |> put_session(:current_user, user)
         |> configure_session(renew: true)
         |> redirect(to: "/")
+
       {:error, reason} ->
         conn
         |> put_flash(:error, reason)

@@ -11,8 +11,7 @@ config :ueberauth_example, UeberauthExampleWeb.Endpoint,
   root: Path.dirname(__DIR__),
   render_errors: [accepts: ~w(html json)],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  pubsub: [name: UeberauthExample.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: UeberauthExample.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,7 +23,7 @@ config :ueberauth_example, ecto_repos: [UeberauthExample.Repo]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
 
 # Configure phoenix generators
 config :phoenix, :generators,
@@ -33,16 +32,18 @@ config :phoenix, :generators,
 
 config :ueberauth, Ueberauth,
   providers: [
-    facebook: { Ueberauth.Strategy.Facebook, [] },
-    github: { Ueberauth.Strategy.Github, [default_scope: "user:email"] },
-    google: { Ueberauth.Strategy.Google, [] },
-    identity: { Ueberauth.Strategy.Identity, [
-        callback_methods: ["POST"],
-        uid_field: :username,
-        nickname_field: :username,
-      ] },
-    slack: { Ueberauth.Strategy.Slack, [] },
-    twitter: { Ueberauth.Strategy.Twitter, []}
+    facebook: {Ueberauth.Strategy.Facebook, []},
+    github: {Ueberauth.Strategy.Github, [default_scope: "user:email"]},
+    google: {Ueberauth.Strategy.Google, []},
+    identity:
+      {Ueberauth.Strategy.Identity,
+       [
+         callback_methods: ["POST"],
+         uid_field: :username,
+         nickname_field: :username
+       ]},
+    slack: {Ueberauth.Strategy.Slack, []},
+    twitter: {Ueberauth.Strategy.Twitter, []}
   ]
 
 config :ueberauth, Ueberauth.Strategy.Facebook.OAuth,
