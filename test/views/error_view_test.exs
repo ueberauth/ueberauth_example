@@ -6,16 +6,16 @@ defmodule UeberauthExample.ErrorViewTest do
 
   test "renders 404.html" do
     assert render_to_string(UeberauthExampleWeb.ErrorView, "404.html", []) ==
-           "Page not found"
+             "Page not found"
   end
 
   test "render 500.html" do
     assert render_to_string(UeberauthExampleWeb.ErrorView, "500.html", []) ==
-           "Server internal error"
+             "Server internal error"
   end
 
   test "render any other" do
     assert render_to_string(UeberauthExampleWeb.ErrorView, "505.html", []) ==
-           "Server internal error"
+             "Server internal error"
   end
 end
