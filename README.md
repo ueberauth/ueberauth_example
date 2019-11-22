@@ -1,10 +1,9 @@
 # Überauth Example
-[![Build Status][travis-img]][travis] [![License][license-img]][license]
+![](https://github.com/ueberauth/ueberauth_example/workflows/Elixir%20CI/badge.svg?event=push) [![License][license-img]][license]
 
-[travis-img]: https://travis-ci.org/ueberauth/ueberauth_example.svg?branch=master
-[travis]: https://travis-ci.org/ueberauth/ueberauth_example
 [license-img]: http://img.shields.io/badge/license-MIT-brightgreen.svg
 [license]: http://opensource.org/licenses/MIT
+
 
 > Using Überauth for authentication in Phoenix.
 
