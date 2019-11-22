@@ -1,6 +1,10 @@
 # Überauth Example
 ![](https://github.com/ueberauth/ueberauth_example/workflows/Elixir%20CI/badge.svg?event=push) [![License][license-img]][license]
 
+-[license-img]: http://img.shields.io/badge/license-MIT-brightgreen.svg
+-[license]: http://opensource.org/licenses/MIT
+
+
 > Using Überauth for authentication in Phoenix.
 
 This project demonstrates how to use Überauth and multiple strategies to provide authentication for a Phoenix application.  The project has been setup to run on Heroku can can be found at [ueberauth-example.herokuapp.com](https://ueberauth-example.herokuapp.com).
