@@ -1,8 +1,8 @@
 # Überauth Example
 ![](https://github.com/ueberauth/ueberauth_example/workflows/Elixir%20CI/badge.svg?event=push) [![License][license-img]][license]
 
--[license-img]: http://img.shields.io/badge/license-MIT-brightgreen.svg
--[license]: http://opensource.org/licenses/MIT
+[license-img]: http://img.shields.io/badge/license-MIT-brightgreen.svg
+[license]: http://opensource.org/licenses/MIT
 
 
 > Using Überauth for authentication in Phoenix.
