@@ -33,7 +33,7 @@ defmodule UeberauthExampleWeb do
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import UeberauthExampleWeb.Router.Helpers
+      alias UeberauthExampleWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -49,7 +49,7 @@ defmodule UeberauthExampleWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import UeberauthExampleWeb.Router.Helpers
+      alias UeberauthExampleWeb.Router.Helpers, as: Routes
     end
   end
 

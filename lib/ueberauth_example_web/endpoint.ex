@@ -3,7 +3,9 @@ defmodule UeberauthExampleWeb.Endpoint do
 
   use Phoenix.Endpoint, otp_app: :ueberauth_example
 
-  socket("/socket", UeberauthExampleWeb.UserSocket)
+  socket "/socket", UeberauthExampleWeb.UserSocket,
+    websocket: true,
+    longpoll: false
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -30,7 +32,7 @@ defmodule UeberauthExampleWeb.Endpoint do
   plug(Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
-    json_decoder: Poison
+    json_decoder: Jason
   )
 
   plug(Plug.MethodOverride)

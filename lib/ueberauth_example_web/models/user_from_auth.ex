@@ -3,7 +3,7 @@ defmodule UserFromAuth do
   Retrieve the user information from an auth request
   """
   require Logger
-  require Poison
+  require Jason
 
   alias Ueberauth.Auth
 
@@ -30,7 +30,7 @@ defmodule UserFromAuth do
   # default case if nothing matches
   defp avatar_from_auth(auth) do
     Logger.warn("#{auth.provider} needs to find an avatar URL!")
-    Logger.debug(Poison.encode!(auth))
+    Logger.debug(Jason.encode!(auth))
     nil
   end
 

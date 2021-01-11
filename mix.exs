@@ -5,10 +5,9 @@ defmodule UeberauthExample.Mixfile do
     [
       app: :ueberauth_example,
       version: "0.0.1",
-      elixir: "~> 1.3",
+      elixir: "~> 1.9.1",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers(),
-      build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps()
@@ -21,20 +20,17 @@ defmodule UeberauthExample.Mixfile do
   def application do
     [
       mod: {UeberauthExample, []},
-      applications: [
-        :phoenix,
-        :phoenix_html,
-        :cowboy,
+      extra_applications: [
         :logger,
-        :phoenix_ecto,
-        :postgrex,
-        :oauth,
+        :runtime_tools,
+        :ueberauth,
         :ueberauth_facebook,
         :ueberauth_google,
         :ueberauth_github,
         :ueberauth_identity,
         :ueberauth_slack,
-        :ueberauth_twitter
+        :ueberauth_twitter,
+        :hackney
       ]
     ]
   end
@@ -48,23 +44,25 @@ defmodule UeberauthExample.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.3.2"},
-      {:phoenix_ecto, "~> 3.2"},
-      {:postgrex, "~> 0.13"},
-      {:phoenix_html, "~> 2.10.3"},
-      {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:cowboy, "~> 1.0"},
-      {:ueberauth, "~> 0.4"},
-      {:oauth2, "~> 0.8", override: true},
-      {:oauth, github: "tim/erlang-oauth"},
-      {:ueberauth_facebook, "~> 0.5"},
-      {:ueberauth_google, "~> 0.5"},
-      {:ueberauth_github, "~> 0.4"},
+      {:phoenix, "~> 1.4.9"},
+      {:phoenix_pubsub, "~> 1.1"},
+      {:phoenix_ecto, "~> 4.0"},
+      {:ecto_sql, "~> 3.1"},
+      {:postgrex, ">= 0.0.0"},
+      {:phoenix_html, "~> 2.11"},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:plug_cowboy, "~> 2.0"},
+      {:ueberauth, "~> 0.6"},
+      {:oauth2, "~> 2.0", override: true},
+      {:ueberauth_facebook, "~> 0.8"},
+      {:ueberauth_google, "~> 0.8"},
+      {:ueberauth_github, "~> 0.7"},
       {:ueberauth_identity, "~> 0.2"},
-      {:ueberauth_slack, "~> 0.4"},
-      {:ueberauth_twitter, "~> 0.2"},
-      {:poison, "~> 3.0", override: true},
-      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false}
+      {:ueberauth_slack, "~> 0.6"},
+      {:ueberauth_twitter, "~> 0.3"},
+      {:jason, "~> 1.0"},
+      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false},
+      {:hackney, "~> 1.15.2"}
     ]
   end
 
