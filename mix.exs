@@ -61,7 +61,7 @@ defmodule UeberauthExample.Mixfile do
       {:ueberauth_slack, "~> 0.6"},
       {:ueberauth_twitter, "~> 0.3"},
       {:jason, "~> 1.0"},
-      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:hackney, "~> 1.15.2"}
     ]
   end
