@@ -1,11 +1,11 @@
-defmodule UeberauthExample.Mixfile do
+defmodule UeberauthExample.MixProject do
   use Mix.Project
 
   def project do
     [
       app: :ueberauth_example,
       version: "0.0.1",
-      elixir: "~> 1.9.1",
+      elixir: "~> 1.11",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -19,19 +19,8 @@ defmodule UeberauthExample.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {UeberauthExample, []},
-      extra_applications: [
-        :logger,
-        :runtime_tools,
-        :ueberauth,
-        :ueberauth_facebook,
-        :ueberauth_google,
-        :ueberauth_github,
-        :ueberauth_identity,
-        :ueberauth_slack,
-        :ueberauth_twitter,
-        :hackney
-      ]
+      mod: {UeberauthExample.Application, []},
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
@@ -44,13 +33,15 @@ defmodule UeberauthExample.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.9"},
-      {:phoenix_pubsub, "~> 1.1"},
-      {:phoenix_ecto, "~> 4.0"},
-      {:ecto_sql, "~> 3.1"},
+      {:phoenix, "~> 1.5.7"},
+      {:phoenix_ecto, "~> 4.1"},
+      {:ecto_sql, "~> 3.4"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:telemetry_metrics, "~> 0.4"},
+      {:telemetry_poller, "~> 0.4"},
+      {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:ueberauth, "~> 0.6"},
       {:oauth2, "~> 2.0", override: true},
@@ -60,23 +51,22 @@ defmodule UeberauthExample.Mixfile do
       {:ueberauth_identity, "~> 0.2"},
       {:ueberauth_slack, "~> 0.6"},
       {:ueberauth_twitter, "~> 0.3"},
-      {:jason, "~> 1.0"},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:hackney, "~> 1.15.2"}
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false}
     ]
   end
 
-  # Aliases are shortcut or tasks specific to the current project.
-  # For example, to create, migrate and run the seeds file at once:
+  # Aliases are shortcuts or tasks specific to the current project.
+  # For example, to install project dependencies and perform other setup tasks, run:
   #
-  #     $ mix ecto.setup
+  #     $ mix setup
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
+      setup: ["deps.get", "ecto.setup", "cmd npm install --prefix assets"],
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"]
     ]
   end
 end

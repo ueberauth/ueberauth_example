@@ -3,35 +3,36 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Überauth Example</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <script defer src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
-
   <body>
-    <div class="container" role="main">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
+    <header>
+      <section class="container">
+        <nav>
+          <ul>
           <li>
             <a href="https://github.com/ueberauth/ueberauth_example">
               <i class="fa fa-github"></i>
               View on GitHub
             </a>
           </li>
-        </ul>
-        <span class="logo"></span>
-      </div>
-
+          </ul>
+        </nav>
+        <a href="https://phoenixframework.org/" class="phx-logo">
+          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+        </a>
+      </section>
+    </header>
+    <main class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <%= render @view_module, @view_template, assigns %>
-
-    </div> <!-- /container -->
-    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+      <%= @inner_content %>
+    </main>
   </body>
 </html>

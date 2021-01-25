@@ -1,45 +1,55 @@
-<div class="jumbotron">
-  <h2>Überauth + Phoenix Example</h2>
-  <p class="lead">
-  This is an application to show an example of how to wire up
-  <a href="https://github.com/ueberauth/ueberauth">Überauth</a> with
-  <a href="https://github.com/phoenixframework/phoenix">Phoenix</a>.
+<section class="phx-hero">
+  <h1>Überauth + Phoenix Example</h1>
+  <p>
+    This is an application to show an example of how to wire up
+    <a href="https://github.com/ueberauth/ueberauth">Überauth</a> with
+    <a href="https://github.com/phoenixframework/phoenix">Phoenix</a>.
   </p>
-
   <%= if @current_user do %>
     <h2>Welcome, <%= @current_user.name %>!</h2>
-    <img src="<%= @current_user.avatar %>" class="img-circle"/>
-    <%= link "Logout", to: Routes.auth_path(@conn, :delete), method: "delete" %>
+    <div>
+      <img src="<%= @current_user.avatar %>" />
+    </div>
+    <%= link "Logout", to: Routes.auth_path(@conn, :delete), method: "delete", class: "button" %>
     <br>
   <% else %>
-    <a class="btn btn-primary btn-lg" href="/auth/github">
-      <i class="fa fa-github"></i>
-      Sign in with GitHub
-    </a>
-
-    <a class="btn btn-primary btn-lg" href="/auth/facebook">
-      <i class="fa fa-facebook"></i>
-      Sign in with Facebook
-    </a>
-
-    <a class="btn btn-primary btn-lg" href="/auth/google">
-      <i class="fa fa-google"></i>
-      Sign in with Google
-    </a>
-
-    <a class="btn btn-primary btn-lg" href="/auth/slack">
-      <i class="fa fa-slack"></i>
-      Sign in with Slack
-    </a>
-
-    <a class="btn btn-primary btn-lg" href="/auth/twitter">
-      <i class="fa fa-twitter"></i>
-      Sign in with Twitter
-    </a>
-
-    <a class="btn btn-primary btn-lg" href="/auth/identity">
-      <i class="fa fa-user"></i>
-      Sign in with Username/Password
-    </a>
+    <ul style="list-style: none">
+      <li>
+        <a class="button" href="<%= Routes.auth_path(@conn, :request, "github") %>">
+          <i class="fa fa-github"></i>
+          Sign in with GitHub
+        </a>
+      </li>
+      <li>
+        <a class="button" href="<%= Routes.auth_path(@conn, :request, "facebook") %>">
+        <i class="fa fa-facebook"></i>
+        Sign in with Facebook
+        </a>
+      </li>
+      <li>
+        <a class="button" href="<%= Routes.auth_path(@conn, :request, "google") %>">
+        <i class="fa fa-google"></i>
+        Sign in with Google
+        </a>
+      </li>
+      <li>
+        <a class="button" href="<%= Routes.auth_path(@conn, :request, "slack") %>">
+        <i class="fa fa-slack"></i>
+        Sign in with Slack
+        </a>
+      </li>
+      <li>
+        <a class="button" href="<%= Routes.auth_path(@conn, :request, "twitter") %>">
+        <i class="fa fa-twitter"></i>
+        Sign in with Twitter
+        </a>
+      </li>
+      <li>
+        <a class="button" href="<%= Routes.auth_path(@conn, :request, "identity") %>">
+        <i class="fa fa-user"></i>
+        Sign in with Username/Password
+        </a>
+      </li>
+    </ul>
   <% end %>
-</div>
+</section>

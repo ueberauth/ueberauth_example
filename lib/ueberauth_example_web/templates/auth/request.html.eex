@@ -1,50 +1,44 @@
+<h1>Log in with username / password</h1>
+
+<p>
+  Enter the information to simulate the authentication.
+</p>
+
 <%= form_tag @callback_url, method: "post" do %>
-  <div class='control-group'>
-    <label class='control-label' for='email-input'>Email</label>
-    <input class='form-control' type='email' name='email' value='<%= @conn.params["email"] %>' />
-  </div>
+  <fieldset>
+    <legend>Authentication Information</legend>
 
-  <div class='control-group'>
-    <label class='control-label' for='first-name-input'>First Name</label>
-    <input class='form-control' type='text' name='first_name' value='<%= @conn.params["first_name"] %>' />
-  </div>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required value="<%= @conn.params["email"] %>" />
 
-  <div class='control-group'>
-    <label class='control-label' for='last-name-input'>Last Name</label>
-    <input class='form-control' type='text' name='last_name' value='<%= @conn.params["last_name"] %>' />
-  </div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required />
 
-  <div class='control-group'>
-    <label class='control-label' for='nickname-input'>Username</label>
-    <input class='form-control' type='text' name='username' value='<%= @conn.params["username"] %>' />
-  </div>
+    <label for="password_confirmation">Confirm Password</label>
+    <input type="password" name="password_confirmation" id="password_confirmation" required />
+  </fieldset>
 
-  <div class='control-group'>
-    <label class='control-label' for='phone-input'>Phone</label>
-    <input class='form-control' type='tel' name='phone' value='<%= @conn.params["phone"] %>' />
-  </div>
+  <fieldset>
+    <legend>Additional Information</legend>
 
-  <div class='control-group'>
-    <label class='control-label' for='location-input'>Location</label>
-    <input class='form-control' type='text' name='location' value='<%= @conn.params["location"] %>' />
-  </div>
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" id="first_name" value="<%= @conn.params["first_name"] %>" />
 
-  <div class='control-group'>
-    <label class='control-label' for='description-input'>Description</label>
-    <textarea class='form-control' name='description' value='<%= @conn.params["description"] %>'></textarea>
-  </div>
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" id="last_name" value="<%= @conn.params["last_name"] %>" />
 
-  <div class='control-group'>
-    <label class='control-label' for='password-input'>Password</label>
-    <input class='form-control' type='password' name='password' />
-  </div>
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" value="<%= @conn.params["username"] %>" />
 
-  <div class='control-group'>
-    <label class='control-label' for='password-confirmation-input'>Confirm Password</label>
-    <input class='form-control' type='password' name='password_confirmation' />
-  </div>
+    <label for="phone">Phone</label>
+    <input type="tel" name="phone" id="phone" value="<%= @conn.params["phone"] %>" />
 
-  <div class='control-group'>
-    <button class='btn btn-primary'>Login</button>
-  </div>
+    <label for="location">Location</label>
+    <input type="text" name="location" id="location" value="<%= @conn.params["location"] %>" />
+
+    <label for="description">Description</label>
+    <textarea name="description" id="description"><%= @conn.params["description"] %></textarea>
+  </fieldset>
+
+  <input class="button" type="submit" value="Login" />
 <% end %>
