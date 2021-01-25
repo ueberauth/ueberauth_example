@@ -22,10 +22,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1.0.0
-      - uses: actions/setup-elixir@v1.0.0
+      - uses: erlef/setup-elixir@v1
         with:
-          otp-version: 22.x
-          elixir-version: 1.9.x
+          otp-version: '23.2.3'
+          elixir-version: '1.11.3'
       - run: mix deps.get
       - run: mix compile --warnings-as-errors
       - run: mix format --check-formatted --dry-run
