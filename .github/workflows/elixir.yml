@@ -30,6 +30,10 @@ jobs:
           elixir-version: '1.11.3'
       - run: mix deps.get
       - run: mix compile --warnings-as-errors
+        env:
+          MIX_ENV: test
       - run: mix format --check-formatted --dry-run
       - run: mix credo --strict
+        env:
+          MIX_ENV: test
       - run: mix test
