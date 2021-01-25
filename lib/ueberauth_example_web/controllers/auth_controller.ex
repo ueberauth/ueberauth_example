@@ -4,9 +4,11 @@ defmodule UeberauthExampleWeb.AuthController do
   """
 
   use UeberauthExampleWeb, :controller
-  plug(Ueberauth)
+
+  plug Ueberauth
 
   alias Ueberauth.Strategy.Helpers
+  alias UeberauthExample.UserFromAuth
 
   def request(conn, _params) do
     render(conn, "request.html", callback_url: Helpers.callback_url(conn))

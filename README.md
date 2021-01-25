@@ -59,7 +59,7 @@ In this example we'll use five strategies:
 1. Run server:
 
 	```shell
-	$ mix phoenix.server
+	$ mix phx.server
 	```
 
 1. Authenticate at [http://localhost:4000](http://localhost:4000)!

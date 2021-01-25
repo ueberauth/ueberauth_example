@@ -1,4 +1,4 @@
-defmodule UserFromAuth do
+defmodule UeberauthExample.UserFromAuth do
   @moduledoc """
   Retrieve the user information from an auth request
   """
@@ -54,7 +54,7 @@ defmodule UserFromAuth do
     end
   end
 
-  defp validate_pass(%{other: %{password: ""}}) do
+  defp validate_pass(%{other: %{password: nil}}) do
     {:error, "Password required"}
   end
 
