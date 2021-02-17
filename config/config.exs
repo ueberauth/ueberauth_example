@@ -7,9 +7,6 @@
 # General application configuration
 import Config
 
-config :ueberauth_example,
-  ecto_repos: [UeberauthExample.Repo]
-
 # Configures the endpoint
 config :ueberauth_example, UeberauthExampleWeb.Endpoint,
   url: [host: "localhost"],

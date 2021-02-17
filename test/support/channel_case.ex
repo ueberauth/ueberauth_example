@@ -6,13 +6,6 @@ defmodule UeberauthExampleWeb.ChannelCase do
   Such tests rely on `Phoenix.ChannelTest` and also
   import other functionality to make it easier
   to build common data structures and query the data layer.
-
-  Finally, if the test case interacts with the database,
-  we enable the SQL sandbox, so changes done to the database
-  are reverted at the end of every test. If you are using
-  PostgreSQL, you can even run database tests asynchronously
-  by setting `use UeberauthExampleWeb.ChannelCase, async: true`, although
-  this option is not recommended for other databases.
   """
 
   use ExUnit.CaseTemplate
@@ -28,13 +21,7 @@ defmodule UeberauthExampleWeb.ChannelCase do
     end
   end
 
-  setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(UeberauthExample.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(UeberauthExample.Repo, {:shared, self()})
-    end
-
+  setup do
     :ok
   end
 end
