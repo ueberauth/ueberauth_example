@@ -41,6 +41,7 @@ defmodule UeberauthExample.MixProject do
       {:telemetry_poller, "~> 0.4"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
+      {:plug_crypto, "~> 1.2"},
       {:ueberauth, "~> 0.6"},
       {:oauth2, "~> 2.0", override: true},
       {:ueberauth_facebook, "~> 0.8"},
