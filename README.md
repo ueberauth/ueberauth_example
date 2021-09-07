@@ -46,7 +46,7 @@ In this example we'll use five strategies:
 1. Clone the project:
 
 	```shell
-	$ git clone git@github.com:ueberauth/ueberauth_example.git
+	$ git clone https://github.com/ueberauth/ueberauth_example.git
 	$ cd ueberauth_example
 	```
 
