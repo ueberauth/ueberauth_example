@@ -28,6 +28,7 @@ jobs:
         with:
           otp-version: '23.2.3'
           elixir-version: '1.11.3'
+          version-type: strict
       - run: mix deps.get
       - run: mix compile --warnings-as-errors
         env:
