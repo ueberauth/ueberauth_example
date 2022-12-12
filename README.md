@@ -22,8 +22,8 @@ In this example we'll use five strategies:
 
 1. Ensure the following prerequisites are met/installed:
 
-  + Erlang 19
-  + Elixir 1.3
+  + Erlang 23
+  + Elixir 1.11
 
 1. Retrieve app ids and secrets and set environment variables:
 
