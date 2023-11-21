@@ -8,3 +8,6 @@ config :ueberauth_example, UeberauthExampleWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+
+config :ueberauth, Ueberauth,
+  providers: [{:testing, {Ueberauth.Strategy.Test, []}}]

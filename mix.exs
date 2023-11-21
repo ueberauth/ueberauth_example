@@ -42,7 +42,7 @@ defmodule UeberauthExample.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:plug_crypto, "~> 1.2"},
-      {:ueberauth, "~> 0.6"},
+      {:ueberauth, path: "../ueberauth",  override: true},
       {:oauth2, "~> 2.0", override: true},
       {:ueberauth_facebook, "~> 0.8"},
       {:ueberauth_google, "~> 0.8"},
